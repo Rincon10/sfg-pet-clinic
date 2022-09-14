@@ -1,8 +1,6 @@
-package guru.springframework.sfgpetclinic.model.services;
+package guru.springframework.sfgpetclinic.services;
 
 import guru.springframework.sfgpetclinic.model.Owner;
-
-import java.util.Set;
 
 /**
  * Interface OwnerService Created on 14/09/2022

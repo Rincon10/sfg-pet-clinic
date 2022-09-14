@@ -1,8 +1,6 @@
-package guru.springframework.sfgpetclinic.model.services;
+package guru.springframework.sfgpetclinic.services;
 
 import guru.springframework.sfgpetclinic.model.Vet;
-
-import java.util.Set;
 
 /**
  * Interface VetService Created on 14/09/2022
