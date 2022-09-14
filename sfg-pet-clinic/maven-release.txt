@@ -1,0 +1,25 @@
+ls .ssh/
+
+ssh-keygen
+
+(Esto generara, una llave publica y privada de ssh para permitir que realicemos la conexion a git por medio de ssh)
+
+cat id_rsa.pub
+
+Copiaremos la llave publica y la agregaremos a github, en la seccion de sshPublic
+
+
+eval $(ssh-agent -s)
+
+ssh-add id_rsa
+
+Con esto le decimos al proceso ssh-agent que utilice la llave privada generada cuando lo usemos.
+
+IMPORTANTE
+
+Para que esto funcione debemos asegurarnos que el repositorio git del proyecto no sea https ya que este no garantiza la autenticidad de la peticion
+
+se debe tener clonado como ssh project
+
+Example:
+origin  git@github.com:Rincon10/sfg-pet-clinic.git (fetch)
