@@ -1,31 +1,39 @@
 package guru.springframework.sfgpetclinic.model;
 
+
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+
 /**
  * Class Person Created on 13/09/2022
  *
  * @Author Iván Camilo Rincon Saavedra
  */
+@MappedSuperclass
 public class Person extends BaseEntity {
 
-    private String fisrtName;
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
 
     public Person() {
     }
 
-    public Person(String fisrtName, String lastName) {
-        this.fisrtName = fisrtName;
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
         this.lastName = lastName;
     }
 
 
 
-    public String getFisrtName() {
-        return fisrtName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFisrtName(String fisrtName) {
-        this.fisrtName = fisrtName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
